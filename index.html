@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Labtop ToDo</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="laptop-container">
+      <div class="laptop">
+        <div class="lid">
+          <div class="lid-front"></div>
+          <div class="screen">
+            <div class="content">
+              <div id="clock">00:00:00</div>
+              <div id="greeting" class="hidden"></div>
+              <div id="quote"></div>
+              <div id="weather">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <div class="content">
+                <form id="login-form" class="hidden">
+                  <h2>System Login</h2>
+                  <input type="text" placeholder="Enter username" required />
+                  <button type="submit">Login</button>
+                </form>
+                <div class="youtube-container">
+                  <iframe
+                    width="720"
+                    height="405"
+                    src="https://www.youtube.com/embed/M5QY2_8704o"
+                    frameborder="0"
+                    allow="autoplay; encrypted-media"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+                <div class="todo-container">
+                  <div class="window">
+                    <div class="title-bar">
+                      <div class="title-bar-text">To-Do List</div>
+                      <div class="title-bar-controls">
+                        <button aria-label="Minimize"></button>
+                        <button aria-label="Maximize"></button>
+                        <button aria-label="Close"></button>
+                      </div>
+                    </div>
+                    <div class="window-body">
+                      <form id="todo-form">
+                        <input
+                          type="text"
+                          placeholder="Add a new task"
+                          required
+                        />
+                        <button type="submit">ADD</button>
+                      </form>
+                      <ul id="todo-list"></ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <span style="margin-bottom: 30px"
+                ><p>
+                  If text input doesn't work, touch the size of the window. You
+                  can also open the developer console by pressing F12. I don't
+                  know why, but the test goes well, but this is what happens
+                  when you put it on the server.
+                </p></span
+              >
+            </div>
+            <div class="reaction-test-container">
+              <div class="window">
+                <div class="title-bar">
+                  <div class="title-bar-text">Reaction Time Test</div>
+                  <div class="title-bar-controls">
+                    <button aria-label="Minimize"></button>
+                    <button aria-label="Maximize"></button>
+                    <button aria-label="Close"></button>
+                  </div>
+                </div>
+                <div class="window-body">
+                  <div id="reaction-test">
+                    <p id="instruction">Click when the screen turns green!</p>
+                    <div id="reaction-area"></div>
+                    <p id="result"></p>
+                    <button id="start-test">Test Start</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <img
+            src="https://cdn.freebiesupply.com/images/large/2x/apple-logo-transparent.png"
+            style="width: 150px"
+          />
+        </div>
+        <div class="base">
+          <div class="keyboard"></div>
+          <div class="touchpad"></div>
+        </div>
+      </div>
+    </div>
+    <script src="js/greeting.js"></script>
+    <script src="js/clock.js"></script>
+    <script src="js/weather.js"></script>
+    <script src="js/background.js"></script>
+    <script src="js/todo.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/reaction-time.js"></script>
+  </body>
+</html>
